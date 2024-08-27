@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <style>
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+  </style>
   <title>AutoCAD Layers</title>
   
   <!-- HTML -->
@@ -16,12 +22,30 @@
 
 <body>
   <h1>AutoCAD Layers</h1>
+  <div>
+    <form>
+      <fieldset>
+        <legend>Board</legend>
+        <div style="display: inline-block; margin: 10px;" id="BoardZ">BOARD ZP</div>
+        <input type="number" placeholder="Thickness in mm" id="boardInput" name="boardInput" min="0" onkeyup="if(value<0) value=0;" 
+        style="width: 100px;">
+      </fieldset><br>
+      <button onclick="copyText('boardInput')"> Copy text</button>
+    </form><br>
+  </div>
   <div id="testing">
     <form>
       <fieldset>
         <legend>Holes</legend>
-        <input type="number" placeholder="Depth in mm" id="holeDepth" style="width: 80px;" onchange="replaceText(this)" name="holeDepth" id="holeDepth">
-        <p style="display: inline-block; margin: 10px;" id="holeLayer">Z</p>
+        <div style="display: inline-block; margin: 10px;" id="hole">HOLE Z</div>
+        <input type="number" placeholder="Depth in mm" id="holeDepth" name="holeDepth" id="holeDepth" min="0" maxlength="2" 
+        style="width: 80px;" oninput="holelayer()">
+        <!--<select oninput="holelayer(this)" name="box" id="box" required>
+          <option value="" selected></option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>//-->
+        
       </fieldset><br>
       <button onclick="copyText('testing')"> Copy text</button>
     </form><br>
@@ -43,10 +67,16 @@
   <button onclick="copyText('demo')">Copy text</button>
     
   <script>
+    function CopyText(id) {
+      
+      var value = document.getElementById(id).innerHTML;
+      navigator.clipboard.writeText(value);
+      alert("Copied the text: " value);
+    }
     function replaceText(selTag) {
       var layerBuild = selTag.options[selTag.selectedIndex].text;
         document.getElementById("demo").innerHTML = "You Selected: " + layerBuild;}
-    function copyText(id){
+    function copy(id){
       var layerName = document.getElementById(id).innerHTML;
       navigator.clipboard.writeText(layerName);
       alert("Copied the text: " + layerName);}
