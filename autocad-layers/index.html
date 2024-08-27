@@ -16,21 +16,27 @@
 
 <body>
   <h1>AutoCAD Layers</h1>
-  <form>
-    <fieldset>
-      <legend>Holes</legend>
-    </fieldset>
-    <div id="testing">testing</div>
-    <button onclick="myFunction2('testing')"> Copy text</button>
-    <fieldset>
-      <legend>Lead In</legend>
-      <select onchange="myFunction1(this)" name="leadin" id="leadin" required>
-      <option value="" selected></option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-      </select>
-    </fieldset>
-  </form><br>
+  <div id="testing">
+    <form>
+      <fieldset>
+        <legend>Holes</legend>
+      </fieldset><br>
+      <button onclick="myFunction2('testing')"> Copy text</button>
+    </form><br>
+  </div>
+  <div>
+    <form>
+      <fieldset>
+        <legend>Lead In</legend>
+        <select onchange="myFunction1(this)" name="leadin" id="leadin" required>
+          <option value="" selected></option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </fieldset><br>
+    </form>
+  </div>
+  
   <div id="demo">Nothing to see here...</div>
   <button onclick="myFunction2('demo')">Copy text</button>
     
