@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <div>First Line</div>
+  <div>Second Line</div>
+  <div>Third Line</div>
+  <div>Fourth Line</div>
+
+<script>
+  const firstLine = "BOARDZP";
+  const secondLine = 18;
+  const thirdLine = "HOLE";
+  const fourthLine = "Z";
+  const fifthLine = 18;
+  
+  const layerName = {
+    fullName: function () {
+      return this.firstLine + this.secondLine + this.thirdLine;
+    }
+  }
+  const board = {
+    firstLine: "BOARD",
+    secondLine: "ZP",
+    thirdLine: 18
+  }
+  const hole = {
+    firstLine: "HOLE",
+    secondLine: "Z",
+    thirdLine: 18
+  }
+  console.log(layerName.fullName.call(board))
+  console.log(layerName.fullName.call(hole))
+</script>
+</body>
+
+</html>

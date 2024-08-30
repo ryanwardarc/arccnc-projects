@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<div id="div1" title="joe">
+  lorem
+</div>
+<button onclick="funky()" type="button">test</button>
+<div id="div2">
+  ipsum
+</div>
+</body>
+<script>
+      /*function 
+      myfunction(div1,div2) {
+       const apple = function layerCompiled(div1, div2) {
+        var layerName = document.getElementById(div1).title;
+        var userInput = document.getElementById(div2).innerHTML;
+        return layerName + userInput;
+      } document.getElementById(div1).innerHTML = apple;
+      }*/
+      
+      var apple = document.getElementById('div1').title;
+      function funky() {
+        document.getElementById('div2').innerHTML = apple;
+      }
+     
+</script>
+
+</html>
