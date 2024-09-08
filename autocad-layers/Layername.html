@@ -337,6 +337,13 @@ input::-webkit-inner-spin-button {
     const fetchId = (id) => document.getElementById(id);
     const fetchValue = (id) => document.getElementById(id).value;
     
+    function copyLayerName(id){
+      var copyText = fetchId(id).innerHTML;
+      //copyText[0].select();
+      navigator.clipboard.writeText(copyText);
+      alert("Copied text: " + copyText);
+    }
+
     function orange(param1,param2){
       const option = document.createElement("option");
       option.innerHTML = param1;
