@@ -16,253 +16,276 @@ input::-webkit-inner-spin-button {
 </head>
 
 <body onload="layerName()">
-  <h1>AutoCAD Layers</h1>
-  <!--board input-->
-  <div>
-  <div>
-    <fieldset>
-      <legend><strong>BOARD</strong></legend>
-      <div>
-        <div class="compiledLayerName" id="board"></div>
-        <button onclick="copyLayerName('board')"> Copy text</button>
-      </div>
-      <div>
-        <label for="input1">Material Thickness (mm)</label>
-        <input type="number" placeholder="18" id="input1" min="0" onkeyup="if(value<0) value=0;"> 
-      </div>
-    </fieldset><br>
-  </div>
-  <!--Hole input-->
-  <div>
-    <fieldset>
-      <legend><strong>HOLE</strong></legend>
-      <div>
-        <div class="compiledLayerName" id="hole"></div>
-        <button onclick="copyLayerName('hole')"> Copy text</button>
-      </div>
-      <div>
-        <label for="input2">Hole Depth (mm)</label>
-        <input type="number" placeholder="18" id="input2" min="0" onkeyup="if(value<0) value=0;">
-        <label for="input3">Layer</label>
-        <select id="input3">
-          <option value="0">0</option>
-          <option value="1" selected>1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-      </div>
-    </fieldset><br>
-  </div>
-  <!--Pocket input-->
-  <div>
-    <fieldset>
-      <legend><strong>POCKET</strong></legend>
-      <div>
-        <div class="compiledLayerName" id="pocket"></div>
-        <button onclick="copyLayerName('pocket')"> Copy text</button>
-      </div>
-      <div>
-        <label for="input4">Hole Depth (mm)</label>
-        <input type="number" placeholder="18" id="input4" min="0" onkeyup="if(value<0) value=0;">
-        <label for="input5">Layer</label>
-        <select id="input5">
-          <option value="0">0</option>
-          <option value="1" >1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4"selected>4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-      </div><br>
-       <!--Tool input-->
-       <div class="toolInput">
-        <div class ="toolSelect">  
-          <label for="input6">Select Tool </label>
-          <select id="input6">
-            <option value="" selected></option>
-          </select>
-        </div>
-        <div><strong><em>OR</em></strong></div>
-        <div class="toolNumberInput">
-          <label for="input7">Tool #</label>
-          <input type="number" placeholder="1001" id="input7" min="0" onkeyup="if(value<0) value=0;">
-        </div>
-      </div><br>
-    </fieldset><br>
-  </div>
+  <h1>AutoCAD to TPA CAD Layers</h1>
   
+  <!--board input-->
+
+  <div class="container">
+    <div class="item1">
+      <fieldset>
+        <legend><strong>BOARD</strong></legend>
+        <p id="board"></p>
+        <button onclick="copyLayerName('board')"> Copy text</button>
+        <div class="tool">
+          <label for="input1">Material Thickness (mm)</label>
+          <input type="number" placeholder="18" id="input1" min="0" onkeyup="if(value<0) value=0;"> 
+          </div>
+      </fieldset>
+ 
+  <!--Hole input-->
+  
+      <fieldset>
+        <legend><strong>HOLE</strong></legend>
+        <p id="hole"></p>
+        <button onclick="copyLayerName('hole')"> Copy text</button>
+        <div class="tool">
+          <div class="item4, item2">
+            <label for="input2">Hole Depth (mm)</label>
+            <input type="number" placeholder="18" id="input2" min="0" onkeyup="if(value<0) value=0;">
+          </div>
+          <div class="item4">
+            <label for="input3">Layer</label>
+            <select id="input3">
+              <option value="0">0</option>
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+        </fieldset>
+  
+  <!--Pocket input-->
+  
+        <fieldset>
+          <legend><strong>POCKET</strong></legend>
+          <p id="pocket"></p>
+          <button onclick="copyLayerName('pocket')"> Copy text</button>
+          <div class="tool">
+            <div class="item4, item2">
+              <label for="input4">Hole Depth (mm)</label>
+              <input type="number" placeholder="18" id="input4" min="0" onkeyup="if(value<0) value=0;">
+            </div>
+            <div class="item4">
+              <label for="input5">Layer</label>
+              <select id="input5">
+               <option value="0">0</option>
+                <option value="1" >1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4"selected>4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+
+  <!--Tool input-->
+       
+          <div class="tool"> 
+            <div class="item4"> 
+              <label for="input6">Select Tool </label>
+              <select id="input6">
+                <option value="" selected></option>
+              </select>
+            </div>
+            <p class="item3"><strong><em>OR</em></strong></p>
+            <div class="item3">
+              <label for="input7">Tool #</label>
+              <input type="number" placeholder="1001" id="input7" min="0" onkeyup="if(value<0) value=0;">
+            </div>
+          </div>
+        </fieldset>
+  
+    </div>
+    
+  
+
   <!--outline & paths input-->
-  <div>
+    <div class="item11">
+  
     <fieldset>
       <legend><strong>OUTLINE & PATHS</strong></legend>
-      <div>
-        <div class="compiledLayerName" id="outline"></div>
-        
-      </div>
-        <!--depth input-->
-      <div style="display: flex;">
-        <div style="width: 325px;">
-        <label for="input8">Rout Depth (mm)</label>
-        <input type="number" placeholder="18" id="input8" min="0" onkeyup="if(value<0) value=0;" 
-        style="width: 30px;text-align: right;">
-        <label for="input9">Layer</label>
-        <select id="input9">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7" selected>7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
+      <p id="outline"></p>
+      <button onclick="copyLayerName('hole')"> Copy text</button>
+
+  <!--depth input-->
+      
+      <div class="tool">
+        <div class="item4">
+          <label for="input8">Rout Depth (mm)</label>
+          <input type="number" placeholder="18" id="input8" min="0" onkeyup="if(value<0) value=0;">
         </div>
-        <button onclick="copyLayerName('hole')"> Copy text</button>
-      </div><br>
-        <!--Tool input-->
-      <div class="toolInput">
-        <div class ="toolSelect">  
+        <div class="item4">
+          <label for="input9">Layer</label>
+          <select id="input9">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7" selected>7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </div>
+<!--Tool input-->
+      <div class="tool">
+        <div class="item4">
           <label for="input10">Select Tool </label>
-          <select name="T" id="input10">
+          <select id="input10">
             <option value="" selected></option>
           </select>
         </div>
-        <div><strong><em>OR</em></strong></div>
-        <div class="toolNumberInput">
+        <p class="item3"><strong><em>OR</em></strong></p>
+        <div class="item3">
           <label for="input11">Tool #</label>
-          <input type="number" oninput="layerCompiled()" placeholder="1001" id="input11" min="0" onkeyup="if(value<0) value=0;" 
-          style="width: 30px;text-align: right;">
+          <input type="number" placeholder="1001" id="input11" min="0" onkeyup="if(value<0) value=0;">
         </div>
-      </div><br>
+      </div>
     
-        <!--compensation input-->
+<!--compensation input-->
+
       <div>  
         <label for="input12">Compensation</label>
-        <select name="K" id="input12" required>
+        <select id="input12" required>
           <option value="" selected></option>
           <option value="1">Left</option>
           <option value="2">Right</option>
           <option value="0">Off</option>
         </select>
       </div>
+
+<!--incoming input-->
     
-    <br>
-    <div class="incomingOutgoing">
-        <!--incoming input-->
-    <div>
-    <fieldset class="incomingBox">
+    <fieldset class="inout">
       <legend><strong>INCOMING</strong>
-        <select name="I" id="input13" required>
+        <select id="input13" required>
         <option value="0">Unmanaged</option>
         <option value="1">Managed</option>
         </select>
       </legend>
-        <!--input for incoming - type-->
-      <div>
-        <label for="inType">Type</label>
-        <select class="incomingOptions"  name="N" id="inType" required disabled>
-          <option value="4" selected></option>
-          <option value="1">Line</option>
-          <option value="2">Left Arc</option>
-          <option value="3">Right Arc</option>
-        </select>
-      </div>
-        <!--input for incoming - length / radius-->
-      <div>
-        <label for="inLengthRad">Length/Radius</label>
-        <input class="incomingOptions" type="number" placeholder="50" id="inLengthRad" min="0" onkeyup="if(value<0) value=0;" 
-        style="width: 30px;text-align: right;" disabled>
-      </div>
-        <!--input for incoming - path (deg)-->
-      <div>
-        <label for="inPathDeg">Path (degrees)</label>
-        <input class="incomingOptions" type="number" placeholder="50" id="inPathDeg" min="0" onkeyup="if(value<0) value=0;" 
-        style="width: 30px;text-align: right;" disabled>
-      </div>
-      <!--input for incoming - initialZ (deg)-->
-      <div>
-        <label for="initialZ">Initial Z</label>
-        <input class="incomingOptions" type="number" placeholder="1" id="initialZ" min="0" onkeyup="if(value<0) value=0;" 
-        style="width: 30px;text-align: right;" disabled>
-      </div>
-      <!--input for presets-->
-      <div class="incomingOptions"><strong><em>OR</em></strong></div>
-      <div>
-        <label for="inPreset" >Preset</label>
-        <select class="incomingOptions" name="N" id="inPreset" required disabled>
-          <option value="" selected></option>
-          <option value="">Future Joinery</option>
-          <option value="1">ARC</option>
-        </select>
-      </div>
+        
+<!--input for incoming - type-->
+      
+      
+      <label class="griditem1" for="inType">Type</label>
+      <select  id="inType" required disabled>
+        <option value="4" selected></option>
+        <option value="1">Line</option>
+        <option value="2">Left Arc</option>
+        <option value="3">Right Arc</option>
+      </select>
+      
+
+<!--input for incoming - length / radius-->
+
+      
+      <label class="griditem2" for="inLengthRad">Length/Radius</label>
+      <input type="number" placeholder="50" id="inLengthRad" min="0" onkeyup="if(value<0) value=0;" disabled>
+      
+
+<!--input for incoming - path (deg)-->
+      
+      <label class="griditem3" for="inPathDeg">Path (degrees)</label>
+      <input type="number" placeholder="50" id="inPathDeg" min="0" onkeyup="if(value<0) value=0;" disabled>
+      
+
+<!--input for incoming - initialZ (deg)-->
+
+      
+      <label class="griditem4" for="initialZ">Initial Z</label>
+      <input type="number" placeholder="1" id="initialZ" min="0" onkeyup="if(value<0) value=0;" disabled>
+      
+      
+<!--input for presets-->
+      <p class="griditem5"><strong><em>OR</em></strong></p>
+      
+      <label class="griditem6" for="inPreset" >Preset</label>
+      <select id="inPreset" required disabled>
+        <option value="" selected></option>
+        <option value="">Future Joinery</option>
+        <option value="1">ARC</option>
+      </select>
     
-    </div>
-    <div>
-      <fieldset class="incomingBox">
-        <legend><strong>OUTGOING</strong>
-          <select name="I" id="input14" required>
-          <option value="0">Unmanaged</option>
-          <option value="1">Managed</option>
-          </select>
-        </legend>
-          <!--input for incoming - type-->
-        <div>
-          <label for="outType" >Type</label>
-          <select class="outgoingOptions" name="N" id="outType" required disabled>
-            <option value="" selected></option>
-            <option value="0">Line</option>
-            <option value="1">Left Arc</option>
-            <option value="2">Right Arc</option>
-          </select>
-        </div>
-          <!--input for incoming - length / radius-->
-        <div>
-          <label for="outLengthRad">inLength/Radius</label>
-          <input class="incomingOptions" type="number" placeholder="50" id="outLengthRad" min="0" onkeyup="if(value<0) value=0;" 
-          style="width: 30px;text-align: right;" disabled>
-        </div>
-          <!--input for incoming - path (deg)-->
-        <div>
-          <label for="outPathDeg">inPath (degrees)</label>
-          <input class="incomingOptions" type="number" placeholder="50" id="outPathDeg" min="0" onkeyup="if(value<0) value=0;" 
-          style="width: 30px;text-align: right;" disabled>
-        </div>
-        <!--input for incoming - finalZ -->
-        <div>
-          <label for="final Z">Final Z</label>
-          <input class="incomingOptions" type="number" placeholder="1" id="finalZ" min="0" onkeyup="if(value<0) value=0;" 
-          style="width: 30px;text-align: right;" disabled>
-        </div>
-        <!--input for presets-->
-        <div class="incomingOptions"><strong><em>OR</em></strong></div>
-        <div>
-          <label for="inPreset" >Preset</label>
-          <select class="incomingOptions" name="N" id="inPreset" required disabled>
-            <option value="" selected></option>
-            <option value="">Future Joinery</option>
-            <option value="1">ARC</option>
-          </select>
-        </div>
-      </fieldset>
-      </div>
-    </fielset>
-    </div>
+    </fieldset>
+    
+ <!--input for outgoing -->   
+    <fieldset class="inout">
+      <legend><strong>OUTGOING</strong>
+        <select id="input14" required>
+            <option value="0">Unmanaged</option>
+            <option value="1">Managed</option>
+        </select>
+      </legend>
+
+<!--input for outgoing - type-->
+        
+        
+      <label class="griditem1" for="outType" >Type</label>
+      <select id="outType" required disabled>
+        <option value="" selected></option>
+        <option value="0">Line</option>
+        <option value="1">Left Arc</option>
+        <option value="2">Right Arc</option>
+       </select>
+        
+          
+<!--input for outgoing - length / radius-->
+
+        
+      <label class="griditem2" for="outLengthRad">inLength/Radius</label>
+      <input type="number" placeholder="50" id="outLengthRad" min="0" onkeyup="if(value<0) value=0;" disabled>
+        
+          
+<!--input for outgoing - path (deg)-->
+
+        
+      <label class="griditem3" for="outPathDeg">inPath (degrees)</label>
+      <input type="number" placeholder="50" id="outPathDeg" min="0" onkeyup="if(value<0) value=0;" disabled>
+        
+
+<!--input for outgoing - finalZ -->
+
+        
+      <label class="griditem4" for="final Z">Final Z</label>
+      <input type="number" placeholder="1" id="finalZ" min="0" onkeyup="if(value<0) value=0;" disabled>
+        
+
+<!--input for presets-->
+
+      <p class="griditem5"><strong><em>OR</em></strong></p>
+        
+      <label class="griditem6" for="outPreset" >Preset</label>
+      <select id="outPreset" required disabled>
+        <option value="" selected></option>
+        <option value="">Future Joinery</option>
+        <option value="1">ARC</option>
+      </select>
+        
+        
+    </fieldset>
+    
+    </fieldset>
   </div>
+  </div>
+  
+  
   
 
 

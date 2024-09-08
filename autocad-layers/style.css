@@ -5,65 +5,115 @@ body {
     align-items: center;
 }
 
-.compiledLayerName {
-    display: inline-block; 
-    margin: 10px;
+fieldset {
+    display: flex;
+    flex-direction: column;   
+}
+
+legend {
+    display: flex;
 }
 
 input {
     width: 30px;
-    text-align: right;
-}
-label {
-    font-style: italic;
-    
 }
 
-fieldset {
+button {
+    height: 30px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.tool {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.item1, .item11 {
     display: flex;
     flex-direction: column;
-}
-
-.compiledLayerName {
-    width: 300px; 
-}
-
-.toolInput {
-    display: flex;
-}
-
-.toolSelect {
-    margin-right: 20px;
-}
-.toolNumberInput {
-    margin-left: 20px;
-}
-
-#incoming {
-    margin-left: 10px;
-}
-
-.incomingOptions {
+    justify-content: space-between;
+    width: 425px;
     margin: 5px;
-    margin-right: 30px;
 }
 
-.outgoingOptions {
-    margin: 5px;
-    margin-right: 30px;
+.item3 {
+    flex: 2 0 auto;
+    text-align: center;
+}
+.item4, .item2 {
+    flex: 1 0 auto; 
 }
 
-.incomingOutgoing {
-    display: flex;
-    
-    
-}
-.incomingBox {
-    display: flex;
-    flex-direction: column;
-    align-items: end;    
+.inout {
+    margin-top: 10px;
+    display: grid;
+    grid: repeat(6,25px) / 1fr 1fr;
+    grid-template-areas: 
+    "griditem1 intype"
+    "griditem2 inlength"
+    "griditem3 inpath"
+    "griditem4 inz"
+    "griditem5 griditem5"
+    "griditem6 inpreset";
 }
 
-legend {
-    font-size: 14px;
+.griditem1 {
+    grid-area: griditem1;
+    text-align: end;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.griditem2 {
+    grid-area: griditem2;
+    text-align: end;
+    align-self: center;
+    margin-right: 10px;
+}
+
+
+.griditem3 {
+    grid-area: griditem3;
+    text-align: end;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.griditem4 {
+    grid-area: griditem4;
+    text-align: end;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.griditem5 {
+    grid-area: griditem5;
+    text-align: center;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.griditem6 {
+    grid-area: griditem6;
+    text-align: end;
+    align-self: center;
+    margin-right: 10px;
+}
+#board, #hole, #pocket, #outline {
+    text-align: start 
+}
+
+#input12 {
+    margin-bottom: 10px;
+}
+
+#inType, #outType {
+    width: 100px;
 }
