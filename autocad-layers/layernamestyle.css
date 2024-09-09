@@ -18,6 +18,10 @@ input {
     width: 30px;
 }
 
+input:disabled, select:disabled {
+    background: #efefefef;
+}
+
 button {
     height: 30px;
     font-weight: bold;
