@@ -5,24 +5,29 @@
     <base target="_top">
   </head>
   <body>
+    <img src="https://drive.google.com/thumbnail?id=16DI2uOcZNd4aPKs769OMAYQHKUN7UTGq&sz=w300"
+    
     <h1>New Project Creation</h1>
-    <div>
-      <label for="customer">Customer</label>
-      <input type="text" id="customer" required>
-      <p>OR</p>
-      <select required>
-        <option value="" select>Select...</option>
-        <option value="TJ Joinery">TJ Joinery</option>
-        <option value="Betec Joinery">Betec</option>
-      </select>
+    <section class="names"
+    <div class="container">
+      
+      <label for="customers">Customer:</label>
+      <input list="customers" name="customer-input"/>
+      
+      <datalist id="customers">
+        <option value="TJ Joinery"></option>
+        <option value="Betec"></option>
+      </datalist>
+      
+    
     </div>
-    <div>
-      <label for="project">Project</label>
+    <div class="container">
+      <label for="project">Project:</label>
       <input type="text" id="project">
     </div>
+    </section>
     
-    
-      <fieldset>
+      <fieldset class="names">
         <legend>Status:</legend>
         <div>
           <label for="enquiry">Enquiry</label>

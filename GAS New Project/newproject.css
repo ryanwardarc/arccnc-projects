@@ -7,11 +7,28 @@ body {
 }
 
 div {
-    height: 50px;
-    background-color: antiquewhite;
-    align-content: center;
+    height: 25px;
+    
 }
 
 p {
     display: inline;
+}
+
+.container {
+  display: flex;
+  justify-items: end;
+  padding: 10px;
+}
+
+.names {
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+label {
+  padding-right: 10px;
+  background-color: pink;
 }
