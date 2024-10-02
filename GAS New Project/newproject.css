@@ -1,34 +1,55 @@
 body { 
     font-family: verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
-    align-items:center;
-    
+    align-items: center;   
 }
 
-div {
-    height: 25px;
-    
+H2 {
+    color: #616161;
 }
 
-p {
-    display: inline;
-}
-
-.container {
-  display: flex;
-  justify-items: end;
-  padding: 10px;
+.input {
+    width: 400px;   
 }
 
 .names {
-  background-color: azure;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100px;
+    justify-content: space-evenly;
+}
+
+fieldset {
+    padding: 20px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 150px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+img {
+    padding: 35px;
 }
 
 label {
   padding-right: 10px;
-  background-color: pink;
 }
+
+button {
+    width: 200px;
+    margin: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+

@@ -3,42 +3,65 @@
   <head>
     <link rel="stylesheet" href="newproject.css">
     <base target="_top">
+
+<script>
+  function myFunc() {
+    //let
+    //let
+
+    google.script.run.withSuccessHandler(updateResult).myFunc
+  }
+
+  function updateResult(result) {
+    document.getElementById("project-number").innerHTML = result.projectName
+  }
+
+</script>
+
   </head>
   <body>
-    <img src="https://drive.google.com/thumbnail?id=16DI2uOcZNd4aPKs769OMAYQHKUN7UTGq&sz=w300"
+    
+    <img src="https://drive.google.com/thumbnail?id=16BGLaUDoP4z7UsX4Y--_dyaodt1uO6hK">
     
     <h1>New Project Creation</h1>
-    <section class="names"
-    <div class="container">
-      
+    <form onsubmit="event.preventDefault();myFunc();"></form>
+    <h2 id="project-number"></h2>
+    <div class="names">
+    <div>
       <label for="customers">Customer:</label>
-      <input list="customers" name="customer-input"/>
+      <input list="customers" name="customer-input" class="input">
       
       <datalist id="customers">
         <option value="TJ Joinery"></option>
         <option value="Betec"></option>
       </datalist>
-      
-    
     </div>
-    <div class="container">
+    <div>
       <label for="project">Project:</label>
-      <input type="text" id="project">
+      <input type="text" id="project" class="input">
     </div>
-    </section>
-    
-      <fieldset class="names">
-        <legend>Status:</legend>
-        <div>
-          <label for="enquiry">Enquiry</label>
-          <input type="radio" name="radio">
-        </div>
-        <div>
-          <label for="confirm">Confirmed Job</label>
-          <input type="radio" name="radio">
-        </div>
-      </fieldset>
-    
+  </div>
+    <div>
+    <fieldset>
+       <legend>Status:</legend>
+       
+       <div>
+        <label for="enquiry">Enquiry</label>
+        <input type="radio" name="radio">
+      </div>
+      <div>
+        <label for="approved">Quote Approved</label>
+        <input type="radio" name="radio">
+      </div>
+      <div>  
+       <label for="confirm">Confirmed Job</label>
+       <input type="radio" name="radio">
+      </div>
+
+    </fieldset>
+    </div>
+
+    <button type="submit">Create</button>
     
   </body>
 </html>

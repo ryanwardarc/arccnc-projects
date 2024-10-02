@@ -19,10 +19,9 @@ while (folders.hasNext()) {
   
   
   var folderName = 'ARC-' + counter + '-'
-  var newFolder = DriveApp.getFolderById(current).createFolder(folderName);
+  //var newFolder = DriveApp.getFolderById(current).createFolder(folderName);
+
+  return {folderName}
 }
-
-var Customer = ['TJ Joinery','Betec Joinery']
-
-console.log(Customer)
+return {folderName}
 }
